@@ -4,11 +4,12 @@ const animales = async () => {
 	try {
 		const res = await fetch(url);
 		const data = await res.json();
-		console.log(data);
+		// console.log(data.animales);
+		return data.animales;
 	} catch (err) {
 		console.log(err);
 	} finally {
-		console.log('exito');
+		// console.log('exito');
 	}
 };
 
