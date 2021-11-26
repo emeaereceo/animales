@@ -1,30 +1,31 @@
 class Animal {
-	#nombre;
-	#edad;
-	#img;
-	#comentarios;
-	#sonido;
+	nombre;
+	edad;
+	img;
+	comentarios;
+	sonido;
 	constructor(nombre, edad, img, comentarios, sonido) {
-		this.#nombre = nombre;
-		this.#edad = edad;
-		this.#img = img;
-		this.#comentarios = comentarios;
-		this.#sonido = sonido;
+		this.nombre = nombre;
+		this.edad = edad;
+		this.img = img;
+		this.comentarios = comentarios;
+		this.sonido = sonido;
 	}
 	get getNombre() {
-		return this.#nombre;
+		return this.nombre;
 	}
 	get getEdad() {
-		return this.#edad;
+		return this.edad;
 	}
 	get getImg() {
-		return this.#img;
+		return this.img;
 	}
 	set setComentarios(comentario) {
-		this.#comentarios = comentario;
+		this.comentarios = comentario;
 	}
 	get getSonido() {
-		return this.#sonido;
+		// return this.sonido;
+		return `./assets/sounds/${this.sonido}`;
 	}
 }
 
@@ -33,8 +34,9 @@ class Leon extends Animal {
 		super(nombre, edad, img, comentarios, sonido);
 	}
 	rugir() {
-		sonidoAnimal.src = `./assets/sounds/${this.getSonido}`;
-		sonidoAnimal.play();
+		sonido.src = `./assets/sounds/${this.getSonido}`;
+		// sonido.src = this.getSonido;
+		sonido.play();
 	}
 }
 
@@ -43,8 +45,8 @@ class Lobo extends Animal {
 		super(nombre, edad, img, comentarios, sonido);
 	}
 	aullar() {
-		sonidoAnimal.src = `./assets/sounds/${this.getSonido}`;
-		sonidoAnimal.play();
+		sonido.src = `./assets/sounds/${this.getSonido}`;
+		sonido.play();
 	}
 }
 
@@ -53,8 +55,8 @@ class Oso extends Animal {
 		super(nombre, edad, img, comentarios, sonido);
 	}
 	grunir() {
-		sonidoAnimal.src = `./assets/sounds/${this.getSonido}`;
-		sonidoAnimal.play();
+		sonido.src = `./assets/sounds/${this.getSonido}`;
+		sonido.play();
 	}
 }
 
@@ -63,8 +65,8 @@ class Serpiente extends Animal {
 		super(nombre, edad, img, comentarios, sonido);
 	}
 	sisear() {
-		sonidoAnimal.src = `./assets/sounds/${this.getSonido}`;
-		sonidoAnimal.play();
+		sonido.src = `./assets/sounds/${this.getSonido}`;
+		sonido.play();
 	}
 }
 
@@ -73,8 +75,8 @@ class Aguila extends Animal {
 		super(nombre, edad, img, comentarios, sonido);
 	}
 	chillar() {
-		sonidoAnimal.src = `./assets/sounds/${this.getSonido}`;
-		sonidoAnimal.play();
+		sonido.src = `./assets/sounds/${this.getSonido}`;
+		sonido.play();
 	}
 }
 
